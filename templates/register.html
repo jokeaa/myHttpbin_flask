@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <title>注册页面</title>
 </head>
+<style>
+
+    * {
+        margin:0 auto;
+    }
+
+    body {
+        text-align: center;
+    }
+
+
+    .warning li {
+        list-style-type: none;
+        color:red
+    }
+
+    .form-label {
+        padding-top: 10px;
+    }
+    .form-body {
+        padding-top: 10px;
+    }
+
+</style>
 <body>
-{% macro render_field(field) %}
-    <div class="form-group">
+{% macro render_field(field,className='') %}
+    <div class="form-group {{ className }}">
         <div class="form-label">{{ field.label }}</div>
-        <div class="form-body">
+        <div class="form-body ">
             {{ field(**kwargs)|safe }}
         </div>
 
@@ -26,7 +50,7 @@
 <form method=post action="/register">
     {{ form.csrf_token }}
     <dl>
-        {{ render_field(form.name) }}
+        {{ render_field(form.name,'test') }}
         {{ render_field(form.email) }}
         {{ render_field(form.password) }}
         {{ render_field(form.confirm) }}

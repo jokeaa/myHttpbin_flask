@@ -7,7 +7,7 @@ from flask_session import Session
 from models.sql_models import User, Post
 from flask_sqlalchemy import SQLAlchemy
 
-from flask_security.utils import login_user
+
 
 from flask_wtf.csrf import CSRFProtect
 from forms import RegistrationForm
@@ -89,7 +89,7 @@ def login():
     session.permanet = True
     user = User()
     login_user(user, remember=True)
-    test = User(name='test1')
+    test = User(name='test5')
     db.session.add(test)
     return 'login page'
 
