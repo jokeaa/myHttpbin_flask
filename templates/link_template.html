@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for i in range(0,n) %}
+        {% if i==offset %}
+            {{ i }}
+        {% else %}
+            <a href="/links/{{ n }}/{{ i }}">{{ i }}</a>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this is my httpBin</title>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="main">
+        <h2>BONUSPOINTS</h2>
+        <ul>
+            <li>
+                <a href="http://now.httpbin.local">now.httpbin.local</a>
+                The current time, in a variety of formats.
+            </li>
+        </ul>
+        <h2>ENDPOINTS</h2>
+        <ul>
+            <li>
+                <a href="/">/</a>
+                This page.
+            </li>
+            <li>
+                <a href="/ip">/ip</a>
+                Returns Origin IP.
+            </li>
+            <li>
+                <a href="/user-agent">/user-agent</a>
+                Returns user-agent.
+            </li>
+            <li>
+                <a href="/headers">/headers</a>
+                Returns header dict.
+            </li>
+            <li>
+                <a href="{{ url_for('links',n=5) }}"><code>/links/n</code></a>
+                Returns header dict.
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>
